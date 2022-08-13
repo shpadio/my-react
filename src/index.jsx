@@ -1,4 +1,10 @@
 const React = {
+
+  memory: {
+    copiedArray: []
+  },
+
+
   createElement: (...args) => {
     const [tag, props, ...children] = args;
     if(typeof tag === 'function'){
@@ -7,6 +13,26 @@ const React = {
     const element = { tag, props: { ...props, children } };
     return element;
   },
+
+  useState: (propValue) => {
+    let value = propValue
+    const setValue = (value) => {
+      value = propValue
+    }
+    return [value, setValue]
+  },
+
+
+
+  useEffect: (fn, depsArray) => {
+    this.memory.copiedArray === JSON.parse(JSON.stringify(depsArray))    
+    if(depsArray.forEach((dependency, index) => dependency !== this.memory.copiedArray[index])){
+    fn()
+    } else {
+      return 
+    }
+  },
+
 };
 
 const App = () => {
