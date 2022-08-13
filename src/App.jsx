@@ -1,5 +1,13 @@
-import { React } from ".";
 
-export const App = () => {
-  return <h1>HERE WE GO!</h1>;
-};
+const React = {
+  createElement: (element) => {
+    const [tag, className, props] = element
+
+    console.log(element,'element!');
+  
+
+  }
+  
+}
+
+const a = <h1>HERE WE GO1</h1>
