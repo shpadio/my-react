@@ -1,4 +1,4 @@
-import { React } from "./my-react";
+import { React } from "./core";
 import { App } from "./App";
 
 
