@@ -17,7 +17,6 @@
     "url": "https://github.com/shpadio/my-react/issues"
   },
   "homepage": "https://github.com/shpadio/my-react#readme",
-  "dependencies": {},
   "devDependencies": {
     "parcel": "^2.7.0"
   }
